@@ -424,7 +424,7 @@ function Billing() {
           <Flex direction="column">
             <CardHeader py="12px">
               <Text color={textColor} fontSize="lg" fontWeight="bold">
-                Billing Information
+                Cross Verification Tasks
               </Text>
             </CardHeader>
             <CardBody>

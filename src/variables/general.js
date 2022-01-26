@@ -336,61 +336,61 @@ export const billingData = [
   {
     name: "Oliver Liam",
     company: "Viking Burrito",
-    email: "oliver@burrito.com",
-    number: "FRB1235476",
+    email: "8 Years",
+    number: "F*673",
   },
   {
     name: "Lucas Harper",
     company: "Stone Tech Zone",
-    email: "lucas@stone-tech.com",
-    number: "FRB1235476",
+    email: "6 Years",
+    number: "R*476",
   },
   {
     name: "Ethan James",
     company: "Fiber Notion",
-    email: "ethan@fiber.com",
-    number: "FRB1235476",
+    email: "2 Years",
+    number: "B*356",
   },
 ];
 
 export const newestTransactions = [
   {
-    name: "Netflix",
-    date: "27 March 2021, at 12:30 PM",
-    price: "- $2,500",
-    logo: FaArrowDown,
+    name: "Peryn Foundation",
+    date: "27 March 2022, at 12:30 PM",
+    price: "+ 1",
+    logo: FaArrowUp,
   },
   {
-    name: "Apple",
-    date: "27 March 2021, at 12:30 PM",
-    price: "+ $2,500",
-    logo: FaArrowUp,
+    name: "External Wallet D1f08E",
+    date: "26 March 2022, at 12:30 PM",
+    price: "- 2",
+    logo: FaArrowDown,
   },
 ];
 
 export const olderTransactions = [
   {
-    name: "Stripe",
-    date: "26 March 2021, at 13:45 PM",
-    price: "+ $800",
+    name: "Peryn Foundation",
+    date: "26 February 2022, at 13:45 PM",
+    price: "+ 1",
     logo: FaArrowUp,
   },
   {
-    name: "HubSpot",
-    date: "26 March 2021, at 12:30 PM",
-    price: "+ $1,700",
+    name: "External Wallet D1f08E",
+    date: "18 March 2021, at 12:30 PM",
+    price: "+ 1",
     logo: FaArrowUp,
   },
   {
-    name: "Webflow",
-    date: "26 March 2021, at 05:00 PM",
+    name: "External Wallet C3f98D",
+    date: "12 March 2022, at 05:00 PM",
     price: "Pending",
     logo: AiOutlineExclamation,
   },
   {
-    name: "Microsoft",
-    date: "25 March 2021, at 16:30 PM",
-    price: "- $987",
+    name: "Peryn Marketplace",
+    date: "10 February 2022, at 16:30 PM",
+    price: "- 1",
     logo: FaArrowDown,
   },
 ];
