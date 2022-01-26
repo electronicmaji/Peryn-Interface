@@ -30,7 +30,7 @@ import Card from "components/Card/Card.js";
 import CardBody from "components/Card/CardBody.js";
 import CardHeader from "components/Card/CardHeader.js";
 import IconBox from "components/Icons/IconBox";
-import { MastercardIcon, VisaIcon, CreativeTimLogo } from "components/Icons/Icons";
+import { MastercardIcon, VisaIcon, CreativeTimLogo, PersonIcon, WalletIcon } from "components/Icons/Icons";
 import BillingRow from "components/Tables/BillingRow";
 import InvoicesRow from "components/Tables/InvoicesRow";
 import { BsArrowRight } from "react-icons/bs";
@@ -44,7 +44,6 @@ import {
   FaRegCalendarAlt,
   FaWallet,
 } from "react-icons/fa";
-import { RiMastercardFill } from "react-icons/ri";
 import {
   billingData,
   invoicesData,
@@ -117,7 +116,12 @@ function Billing() {
                           5
                         </Text>
                       </Flex>
-                      
+                      <Flex direction="column" me="34px">
+                        <Text fontSize="lg">Price Estimate</Text>
+                        <Text fontSize="lg" fontWeight="bold">
+                          $38
+                        </Text>
+                      </Flex>
                     </Flex>
                   </Flex>
                 </Flex>
@@ -132,7 +136,7 @@ function Billing() {
               <CardBody>
                 <Flex direction="column" align="center" w="100%" py="14px">
                   <IconBox as="box" h={"60px"} w={"60px"} bg={iconTeal}>
-                    <Icon h={"24px"} w={"24px"} color="white" as={FaWallet} />
+                    <Icon h={"38px"} w={"38px"} color="white" as={CreativeTimLogo} />
                   </IconBox>
                   <Flex
                     direction="column"
@@ -143,21 +147,46 @@ function Billing() {
                     w="100%"
                   >
                     <Text fontSize="md" color={textColor} fontWeight="bold">
-                      Salary
+                      Current Value
                     </Text>
                     <Text
                       mb="24px"
-                      fontSize="xs"
+                      fontSize="sm"
                       color="gray.400"
                       fontWeight="semibold"
                     >
-                      Belong Interactive
+                      Peryn Token
                     </Text>
                     <Separator />
+                    <Stat flexDirection="row" align="center" justify="center" w="100%" me="auto">
+                <StatLabel
+                  fontSize="sm"
+                  color="gray.400"
+                  fontWeight="bold"
+                  pb=".1rem"
+                >
+                  USD
+                </StatLabel>
+                <Flex align="center" justify="center" w="100%">
+                  <StatNumber fontSize="lg" color={textColor}>
+                    $7.20
+                  </StatNumber>
+                  <StatHelpText
+                    alignSelf="flex-end"
+                    justifySelf="flex-end"
+                    m="0px"
+                    color="green.400"
+                    fontWeight="bold"
+                    ps="3px"
+                    fontSize="md"
+                  >
+                    +5%
+                  </StatHelpText>
+                </Flex>
+              </Stat>
+
                   </Flex>
-                  <Text fontSize="lg" color={textColor} fontWeight="bold">
-                    +$2000
-                  </Text>
+
                 </Flex>
               </CardBody>
             </Card>
@@ -176,7 +205,7 @@ function Billing() {
                   py="14px"
                 >
                   <IconBox as="box" h={"60px"} w={"60px"} bg={iconTeal}>
-                    <Icon h={"24px"} w={"24px"} color="white" as={FaPaypal} />
+                    <Icon h={"24px"} w={"24px"} color="white" as={WalletIcon} />
                   </IconBox>
                   <Flex
                     direction="column"
@@ -187,7 +216,7 @@ function Billing() {
                     w="100%"
                   >
                     <Text fontSize="md" color={textColor} fontWeight="bold">
-                      Paypal
+                      Access Wallet
                     </Text>
                     <Text
                       mb="24px"
@@ -195,12 +224,12 @@ function Billing() {
                       color="gray.400"
                       fontWeight="semibold"
                     >
-                      Freelance Payment
+                      Send/Receive Tokens
                     </Text>
                     <Separator />
                   </Flex>
                   <Text fontSize="lg" color={textColor} fontWeight="bold">
-                    $455.00
+                  6d8976F
                   </Text>
                 </Flex>
               </CardBody>
@@ -273,7 +302,7 @@ function Billing() {
             <CardHeader>
               <Flex justify="space-between" align="center" minHeight="60px" w="100%">
                 <Text fontSize="lg" color={textColor} fontWeight="bold">
-                  Payment Method
+                  Verification Method
                 </Text>
                 <Button
                   bg={bgButton}
@@ -281,7 +310,7 @@ function Billing() {
                   fontSize="xs"
                   variant="no-hover"
                 >
-                  ADD NEW CARD
+                  ADD NEW METHOD
                 </Button>
               </Flex>
             </CardHeader>
@@ -305,10 +334,10 @@ function Billing() {
                   me={{ sm: "0px", md: "24px" }}
                 >
                   <IconBox me="10px" w="25px" h="22px">
-                    <MastercardIcon w="100%" h="100%" />
+                    <PersonIcon w="100%" h="100%" />
                   </IconBox>
                   <Text color="gray.400" fontSize="md" fontWeight="semibold">
-                    7812 2139 0823 XXXX
+                    Self-Verification
                   </Text>
                   <Spacer />
                   <Button
@@ -331,10 +360,10 @@ function Billing() {
                   align="center"
                 >
                   <IconBox me="10px" w="25px" h="25px">
-                    <VisaIcon w="100%" h="100%" />
+                    <WalletIcon w="100%" h="100%" />
                   </IconBox>
                   <Text color="gray.400" fontSize="md" fontWeight="semibold">
-                    7812 2139 0823 XXXX
+                    ID HASH H*893
                   </Text>
                   <Spacer />
                   <Button
@@ -359,7 +388,7 @@ function Billing() {
           <CardHeader>
             <Flex justify="space-between" align="center" mb="1rem" w="100%">
               <Text fontSize="lg" color={textColor} fontWeight="bold">
-                Invoices
+                Previous Reports
               </Text>
               <Button
                 colorScheme="teal"

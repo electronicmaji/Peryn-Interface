@@ -85,11 +85,11 @@ export const CreativeTimLogo = createIcon({
       >
         <g
           id="icon"
-          transform="translate(15.000000, 19.000000)"
+          transform="translate(15.000000, 10.000000)"
           fill="currentColor"
           fill-rule="nonzero"
         >
-          <path d="M69.9154001,61.5739637 L36.4154001,81 L3,61.4260394 L3.08460295,22.4260394 L36.5846014,3 L70,22.5739621 L69.9154001,61.5739637 Z M37.2203947,3 L36.7796053,81 M3,23 L70,62 M3,62 L70,23" id="logo" stroke="#000000" stroke-width="5"></path>
+  <path d="M69.915 61.574 36.415 81 3 61.426l.085-39L36.585 3 70 22.574l-.085 39ZM37.22 3l-.44 78M3 23l67 39M3 62l67-39" stroke="#fff" stroke-width="5" fill="none"/>
         </g>
       </g>
     </g>

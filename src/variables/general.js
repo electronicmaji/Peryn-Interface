@@ -8,6 +8,11 @@ import avatar7 from "assets/img/avatars/avatar7.png";
 import avatar8 from "assets/img/avatars/avatar8.png";
 import avatar9 from "assets/img/avatars/avatar9.png";
 import avatar10 from "assets/img/avatars/avatar10.png";
+import logoP from "assets/svg/logo-p.svg";
+import { CreativeTimLogo } from "components/Icons/Icons";
+
+
+
 // Custom icons
 import {
   AdobexdLogo,
@@ -293,37 +298,37 @@ export const invoicesData = [
   {
     date: "March, 01, 2020",
     code: "#MS-415646",
-    price: "$180",
-    logo: FaFilePdf,
-    format: "PDF",
+    price: "+1",
+    logo: CreativeTimLogo,
+    format: "PRN",
   },
   {
     date: "February, 10, 2020",
     code: "#RV-126749",
-    price: "$250",
-    logo: FaFilePdf,
-    format: "PDF",
+    price: "+1",
+    logo: CreativeTimLogo,
+    format: "PRN",
   },
   {
     date: "April, 05, 2020",
     code: "#FB-212562",
-    price: "$560",
-    logo: FaFilePdf,
-    format: "PDF",
+    price: "+1",
+    logo: CreativeTimLogo,
+    format: "PRN",
   },
   {
     date: "June, 25, 2019",
     code: "#QW-103578",
-    price: "$120",
-    logo: FaFilePdf,
-    format: "PDF",
+    price: "+1",
+    logo: CreativeTimLogo,
+    format: "PRN",
   },
   {
     date: "March, 01, 2019",
     code: "#AR-803481",
-    price: "$300",
-    logo: FaFilePdf,
-    format: "PDF",
+    price: "+1",
+    logo: CreativeTimLogo,
+    format: "PRN",
   },
 ];
 
