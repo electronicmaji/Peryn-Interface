@@ -225,7 +225,7 @@ function Sidebar(props) {
       >
         <CreativeTimLogo w="32px" h="32px" me="10px" />
         <Text fontSize="sm" mt="3px">
-          {logoText}
+          Peryn
         </Text>
       </Link>
       <Separator></Separator>

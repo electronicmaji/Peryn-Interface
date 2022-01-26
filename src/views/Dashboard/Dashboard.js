@@ -240,7 +240,7 @@ export default function Dashboard() {
                   fontWeight="bold"
                   pb=".5rem"
                 >
-                  Purity UI Dashboard
+                  Per<span color="cyan.200">y</span>n
                 </Text>
                 <Text fontSize="sm" color="gray.400" fontWeight="normal">
                   From colors, cards, typography to complex elements, you will

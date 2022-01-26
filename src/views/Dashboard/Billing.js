@@ -8,6 +8,20 @@ import {
   Spacer,
   Text,
   useColorModeValue,
+  Image,
+  Portal,
+  Progress,
+  SimpleGrid,
+  Stat,
+  StatHelpText,
+  StatLabel,
+  StatNumber,
+  Table,
+  Tbody,
+  Th,
+  Thead,
+  Tr,
+  useColorMode,
 } from "@chakra-ui/react";
 // Assets
 import BackgroundCard1 from "assets/img/BackgroundCard1.png";
@@ -16,9 +30,11 @@ import Card from "components/Card/Card.js";
 import CardBody from "components/Card/CardBody.js";
 import CardHeader from "components/Card/CardHeader.js";
 import IconBox from "components/Icons/IconBox";
-import { MastercardIcon, VisaIcon } from "components/Icons/Icons";
+import { MastercardIcon, VisaIcon, CreativeTimLogo } from "components/Icons/Icons";
 import BillingRow from "components/Tables/BillingRow";
 import InvoicesRow from "components/Tables/InvoicesRow";
+import { BsArrowRight } from "react-icons/bs";
+import logoP from "assets/svg/logo-p.svg";
 import TransactionRow from "components/Tables/TransactionRow";
 import { Separator } from "components/Separator/Separator";
 import React from "react";
@@ -38,7 +54,7 @@ import {
 
 function Billing() {
   // Chakra color mode
-  const iconTeal = useColorModeValue("teal.300", "teal.300");
+  const iconTeal = useColorModeValue("teal.400", "teal.400");
   const textColor = useColorModeValue("gray.700", "white");
   const borderColor = useColorModeValue("#dee2e6", "gray.500");
   const bgButton = useColorModeValue(
@@ -48,7 +64,7 @@ function Billing() {
 
   return (
     <Flex direction="column" pt={{ base: "120px", md: "75px" }}>
-      <Grid templateColumns={{ sm: "1fr", lg: "2fr 1.2fr" }} templateRows="1fr">
+      <Grid templateColumns={{ sm: "1fr", lg: "2fr 1.5fr" }} templateRows="1fr">
         <Box>
           <Grid
             templateColumns={{
@@ -59,6 +75,8 @@ function Billing() {
             templateRows={{ sm: "auto auto auto", md: "1fr auto", xl: "1fr" }}
             gap="26px"
           >
+ 
+
             <Card
               backgroundImage={BackgroundCard1}
               backgroundRepeat="no-repeat"
@@ -77,11 +95,11 @@ function Billing() {
                   w="100%"
                 >
                   <Flex justify="space-between" align="center">
-                    <Text fontSize="md" fontWeight="bold">
-                      Purity UI
+                    <Text fontSize="lg" fontWeight="bold">
+                    Per<span>y</span>n
                     </Text>
                     <Icon
-                      as={RiMastercardFill}
+                      as={CreativeTimLogo}
                       w="48px"
                       h="auto"
                       color="gray.400"
@@ -90,23 +108,16 @@ function Billing() {
                   <Spacer />
                   <Flex direction="column">
                     <Box>
-                      <Text fontSize="xl" letterSpacing="2px" fontWeight="bold">
-                        7812 2139 0823 XXXX
-                      </Text>
+                     
                     </Box>
                     <Flex mt="14px">
                       <Flex direction="column" me="34px">
-                        <Text fontSize="xs">VALID THRU</Text>
-                        <Text fontSize="xs" fontWeight="bold">
-                          05/24
+                        <Text fontSize="lg">Tokens</Text>
+                        <Text fontSize="lg" fontWeight="bold">
+                          5
                         </Text>
                       </Flex>
-                      <Flex direction="column">
-                        <Text fontSize="xs">CVV</Text>
-                        <Text fontSize="xs" fontWeight="bold">
-                          09X
-                        </Text>
-                      </Flex>
+                      
                     </Flex>
                   </Flex>
                 </Flex>
@@ -195,6 +206,69 @@ function Billing() {
               </CardBody>
             </Card>
           </Grid>
+
+          <Card maxHeight="290px" minHeight="290.5px" p="1.2rem" flexDirection="column" p="16px" mt="24px" >
+          <CardBody w="100%" height="60%">
+            <Flex flexDirection={{ sm: "column", lg: "row" }} w="100%">
+              <Flex
+                flexDirection="column"
+                h="100%"
+                lineHeight="1.6"
+                width={{ lg: "45%" }}
+              >
+                <Text fontSize="sm" color="gray.400" fontWeight="bold">
+                  Monthly Wage Report
+                </Text>
+                <Text
+                  fontSize="lg"
+                  color={textColor}
+                  fontWeight="bold"
+                  pb=".5rem"
+                >
+                  Fill out this monthly wage report to earn more tokens.
+                </Text>
+    
+                <Spacer />
+                <Flex align="center">
+                  <Button
+                    p="0px"
+                    variant="no-hover"
+                    bg="transparent"
+                    my={{ sm: "1.5rem", lg: "0px" }}
+                  >
+                    <Icon
+                      as={BsArrowRight}
+                      w="20px"
+                      h="20px"
+                      fontSize="2xl"
+                      transition="all .5s ease"
+                      mx=".3rem"
+                      cursor="pointer"
+                      pt="4px"
+                      _hover={{ transform: "translateX(20%)" }}
+                    />
+                  </Button>
+                </Flex>
+              </Flex>
+              <Spacer />
+              <Flex
+                bg="teal.300"
+                align="center"
+                justify="center"
+                borderRadius="15px"
+                width={{ lg: "40%" }}
+                height={"66%"}
+              >
+                <Image
+                  src={logoP}
+                  alt="chakra image"
+                  minWidth={{ md: "300px", lg: "auto" }}
+                  height={"80%"}
+                />
+              </Flex>
+            </Flex>
+          </CardBody>
+        </Card>
           <Card p="16px" mt="24px">
             <CardHeader>
               <Flex justify="space-between" align="center" minHeight="60px" w="100%">
@@ -289,8 +363,8 @@ function Billing() {
               </Text>
               <Button
                 colorScheme="teal"
-                borderColor="teal.300"
-                color="teal.300"
+                borderColor="teal.400"
+                color="teal.400"
                 variant="outline"
                 fontSize="xs"
                 p="8px 32px"
