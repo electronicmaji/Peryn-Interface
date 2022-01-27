@@ -28,3 +28,8 @@ export default extendTheme(
   PanelContentComponent, // Panel Content component
   PanelContainerComponent // Panel Container component
 );
+
+const config = {
+  initialColorMode: 'dark',
+  useSystemColorMode: false,
+}
