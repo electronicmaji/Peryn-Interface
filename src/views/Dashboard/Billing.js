@@ -30,13 +30,17 @@ import Card from "components/Card/Card.js";
 import CardBody from "components/Card/CardBody.js";
 import CardHeader from "components/Card/CardHeader.js";
 import IconBox from "components/Icons/IconBox";
+import DashboardTableRow from "components/Tables/DashboardTableRow";
 import { MastercardIcon, VisaIcon, CreativeTimLogo, PersonIcon, WalletIcon } from "components/Icons/Icons";
 import BillingRow from "components/Tables/BillingRow";
 import InvoicesRow from "components/Tables/InvoicesRow";
+import { IoCheckmarkDoneCircleSharp } from "react-icons/io5";
+import { dashboardTableData, timelineData } from "variables/general";
 import { BsArrowRight } from "react-icons/bs";
 import logoP from "assets/svg/logo-p.svg";
 import TransactionRow from "components/Tables/TransactionRow";
 import { Separator } from "components/Separator/Separator";
+import LineChart from "components/Charts/LineChart";
 import React from "react";
 import {
   FaPaypal,
@@ -236,8 +240,18 @@ function Billing() {
             </Card>
           </Grid>
 
-          <Card maxHeight="290px" minHeight="290.5px" p="1.2rem" flexDirection="column" p="16px" mt="24px" >
-          <CardBody w="100%" height="60%">
+
+          <Grid
+            templateColumns={{
+              sm: "1fr",
+              md: "1fr",
+              xl: "1fr",
+            }}
+            templateRows={{ sm: "auto auto auto", md: "1fr auto", xl: "1fr" }}
+            
+          >
+          <Card maxHeight={{ sm: "300px", lg: "120px" }} p="1.2rem" flexDirection="column" p="16px" mt="24px" >
+          <CardBody w="100%" height="100%">
             <Flex flexDirection={{ sm: "column", lg: "row" }} w="100%">
               <Flex
                 flexDirection="column"
@@ -258,26 +272,7 @@ function Billing() {
                 </Text>
     
                 <Spacer />
-                <Flex align="center">
-                  <Button
-                    p="0px"
-                    variant="no-hover"
-                    bg="transparent"
-                    my={{ sm: "1.5rem", lg: "0px" }}
-                  >
-                    <Icon
-                      as={BsArrowRight}
-                      w="20px"
-                      h="20px"
-                      fontSize="2xl"
-                      transition="all .5s ease"
-                      mx=".3rem"
-                      cursor="pointer"
-                      pt="4px"
-                      _hover={{ transform: "translateX(20%)" }}
-                    />
-                  </Button>
-                </Flex>
+                
               </Flex>
               <Spacer />
               <Flex
@@ -285,8 +280,9 @@ function Billing() {
                 align="center"
                 justify="center"
                 borderRadius="15px"
-                width={{ lg: "40%" }}
-                height={"66%"}
+                width={{ lg: "50%" }}
+                height={{ sm: "60%", lg: "100%" }}
+                flexDirection={{ sm: "column", lg: "row" }}
               >
                 <Image
                   src={logoP}
@@ -298,6 +294,31 @@ function Billing() {
             </Flex>
           </CardBody>
         </Card>
+
+        </Grid>
+
+       
+       
+        <Card p="28px 10px 16px 0px" mb={{ sm: "26px", lg: "0px" }}>
+          <CardHeader mb="20px" pl="22px">
+            <Flex direction="column" alignSelf="flex-start">
+              <Text fontSize="lg" color={textColor} fontWeight="bold" mb="6px">
+                Peryn Token Value
+              </Text>
+              <Text fontSize="md" fontWeight="medium" color="gray.400">
+                <Text as="span" color="green.400" fontWeight="bold">
+                  (+68%) increase
+                </Text>{" "}
+                in 2022
+              </Text>
+            </Flex>
+          </CardHeader>
+          <Box w="100%" h={{ sm: "300px" }} ps="8px">
+            <LineChart />
+          </Box>
+        </Card>
+
+
           <Card p="16px" mt="24px">
             <CardHeader>
               <Flex justify="space-between" align="center" minHeight="60px" w="100%">

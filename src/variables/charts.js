@@ -85,14 +85,16 @@ export const barChartOptions = {
 
 export const lineChartData = [
   {
-    name: "Mobile apps",
-    data: [50, 40, 300, 220, 500, 250, 400, 230, 500],
+    name: "Value (USD)",
+    data: [1.20, 1.80, 2.80, 3.20, 4.30, 5.50, 6.20, 4.30, 7.20],
   },
   {
-    name: "Websites",
-    data: [30, 90, 40, 140, 290, 290, 340, 230, 400],
+    name: "Trading Traffic (Millions)",
+    data: [.5, .2, .3, .2, .2, .3, .4, .4, .8],
   },
 ];
+
+
 
 export const lineChartOptions = {
   chart: {
