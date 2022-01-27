@@ -8,6 +8,7 @@ import {
   Spacer,
   Text,
   useColorModeValue,
+  Input,
   Image,
   Portal,
   Progress,
@@ -16,6 +17,10 @@ import {
   StatHelpText,
   StatLabel,
   StatNumber,
+  FormControl,
+  FormLabel,
+  FormErrorMessage,
+  FormHelperText,
   Table,
   Tbody,
   Th,
@@ -308,14 +313,19 @@ function Requests() {
                <Modal isOpen={isOpen} onClose={onClose}>
         <ModalOverlay />
         <ModalContent>
-          <ModalHeader>Report Employment Data</ModalHeader>
+          <ModalHeader>Request Via API</ModalHeader>
           <ModalCloseButton />
           <ModalBody>
-          <form>
-      <input type="file" name="EmploymentData" />
-      <button 
-                >Submit</button>
-    </form>
+          <FormControl id="firstlast">
+  <FormLabel>First and Last Name</FormLabel>
+  <Input type="firstlast" />
+</FormControl>
+<Button
+            mt={4}
+            colorScheme="teal"
+          >
+            Submit
+          </Button>
           </ModalBody>
 
           <ModalFooter>
