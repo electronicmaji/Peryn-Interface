@@ -2,7 +2,7 @@
   "name": "Peryn-UI",
   "version": "1.0.0",
   "private": true,
-  "homepage": "https://demo.peryn.com/",
+  "homepage": "https://peryn.co/",
   "dependencies": {
     "@chakra-ui/icons": "^1.0.14",
     "@chakra-ui/react": "^1.6.5",

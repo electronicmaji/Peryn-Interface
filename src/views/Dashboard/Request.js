@@ -42,7 +42,7 @@ import DashboardTableRow from "components/Tables/DashboardTableRow";
 import { MastercardIcon, VisaIcon, CreativeTimLogo, PersonIcon, WalletIcon } from "components/Icons/Icons";
 import BillingRow from "components/Tables/BillingRow";
 import InvoicesRow from "components/Tables/InvoicesRow";
-import { IoCloudUploadSharp } from "react-icons/io5";
+import { IoCloudDownloadSharp } from "react-icons/io5";
 import { dashboardTableData, timelineData } from "variables/general";
 import { BsArrowRight } from "react-icons/bs";
 import logoP from "assets/svg/logo-p.svg";
@@ -67,7 +67,7 @@ import {
 
 
 
-function Billing() {
+function Requests() {
   // Chakra color mode
   const iconTeal = useColorModeValue("teal.400", "teal.400");
   const textColor = useColorModeValue("gray.700", "white");
@@ -273,7 +273,7 @@ function Billing() {
                 width={{ lg: "45%" }}
               >
                 <Text fontSize="sm" color="gray.400" fontWeight="bold">
-                  Report Employment Data
+                  Request Via API
                 </Text>
                 <Text
                   fontSize="lg"
@@ -281,7 +281,7 @@ function Billing() {
                   fontWeight="bold"
                   pb=".5rem"
                 >
-                  Submit employment data to earn more tokens.
+                 Request employment data from the Peryn network.
                 </Text>
     
                 <Spacer />
@@ -299,7 +299,7 @@ function Billing() {
                 onClick={onOpen}
               >
                 <Icon
-                    as={IoCloudUploadSharp}
+                    as={IoCloudDownloadSharp}
                     color="white"
                     fontSize="48px"
                     me="6px"Icon
@@ -368,7 +368,7 @@ function Billing() {
           <CardHeader>
             <Flex justify="space-between" align="center" mb="1rem" w="100%">
               <Text fontSize="lg" color={textColor} fontWeight="bold">
-                Previous Reports
+                Previous Requests
               </Text>
               <Button
                 colorScheme="teal"
@@ -478,4 +478,4 @@ function Billing() {
   );
 }
 
-export default Billing;
+export default Requests;

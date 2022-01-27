@@ -2,6 +2,7 @@
 import Dashboard from "views/Dashboard/Dashboard.js";
 import Tables from "views/Dashboard/Tables.js";
 import Billing from "views/Dashboard/Billing.js";
+import Requests from "views/Dashboard/Request.js";
 import RTLPage from "views/RTL/RTLPage.js";
 import Profile from "views/Dashboard/Profile.js";
 import SignIn from "views/Pages/SignIn.js";
@@ -20,10 +21,18 @@ import {
 var dashRoutes = [
   {
     path: "/billing",
-    name: "Dashboard",
+    name: "Submit Data",
     rtlName: "لوحة القيادة",
     icon: <HomeIcon color="inherit" />,
     component: Billing,
+    layout: "/admin",
+  },
+  {
+    path: "/requests",
+    name: "Request Data",
+    rtlName: "لوحة القيادة",
+    icon: <HomeIcon color="inherit" />,
+    component: Requests,
     layout: "/admin",
   },
   {
