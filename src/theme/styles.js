@@ -18,3 +18,7 @@ export const globalStyles = {
     }),
   },
 };
+const config = {
+  initialColorMode: 'dark',
+  useSystemColorMode: false,
+}
